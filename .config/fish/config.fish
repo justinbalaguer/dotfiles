@@ -2,7 +2,33 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-set fish_greeting ""
+set fish_greeting "
+                      %%  %%                                   
+                %%%%          %%%%
+           %%%                     %%
+         %%                         %%
+       %%                            %%
+     %%                                %      %%%%%%  %%  %%
+                                         %%%             %%%
+   %%                              %%%  %            %%%
+   %%                        %%%%        %     %%%%%          
+   %%                  %%%%        %%%%% %%%%
+   %%            %%%%       %%       %%%  %%
+    %      %%%%           %%              %%
+    %% %%/    %%%%%%    %%                 %
+            %%        %%*%%                %*                  
+     %      %%          %%                 %
+     %         %%%%%%&     %%              %
+    %       %  %                          %%
+  %% % % %  %  %%%%                     *%%
+ %    %%%  %%%               %% %%%%%*                      
+           %% %             %%                              
+         %%                %                               
+           %%             %%                                
+              %%%            %                              
+                  %%%%       %%                             
+                        %%%%%%%
+"
 
 set -g fish_prompt_pwd_dir_length 1
 
@@ -38,3 +64,10 @@ function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   else
   end
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/justin/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

@@ -14,6 +14,9 @@ if has("nvim")
   let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'ThePrimeagen/vim-be-good'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 
 call plug#end()
